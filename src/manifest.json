@@ -1,0 +1,10 @@
+{
+    "short-name": "Scrap",
+    "name": "Scrap Scripting Program",
+    "start-url": "scrap/editor.index.html",
+    "background-color": "#ffffff",
+    "display": "browser",
+    "theme-color": "#000f26",
+    "description": "A bad, simple scripting program inspired by Quickscript."
+}
+

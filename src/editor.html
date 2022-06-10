@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@oddbird/css-toggles@1.0.2/dist/css-toggles.min.js" type="module"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <br>
+    <input type="button" class="bf" onclick="save()" value
+='save'"><br><br>
+<button onclick="location.href='index.html'">Go back</button>
+<br>
+<br>
+  <textarea id="bar" name="saisie" onkeyup="transcrire()" rows="30" cols="120"width="100%">Add some text.</textarea>
+</head>
+<body>
+    <script>
+            function save(){
+
+    
+var text = document.getElementById("bar").value;
+text = text.replace(/\n/g, "\r\n");
+var blob=new Blob([text], {type: "text/plain"});
+var anchor = document.createElement("a");
+anchor.download='document';
+anchor.href=window.URL.createObjectURL(blob);
+anchor.target="blank";
+anchor.style.disply="none";
+document.body.appendChild(anchor);
+anchor.click();
+document.body.removeChild(anchor);
+}
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
